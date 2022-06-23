@@ -34,6 +34,11 @@ vars:
     prompt: Enter the route name
   auth_guard:
     type: boolean
-    description: Auth Guard needed
+    description: Auth Guard
     default: false
     prompt: Do you need an Auth Guard for the route?
+  neglect_route:
+    type: boolean
+    description: Neglect back navigation on browsers
+    default: false
+    prompt: Do you want to neglect back navigation?
