@@ -15,10 +15,3 @@ A collection of bricks that enable developers consume reusable templates, thanks
 ## Bricks 🧱
 
 ### [go_router_brick](https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/go_router_brick)
-
-**Roadmap**
-- [ ] Auth Guard using Bloc
-- [ ] Url path strategy
-- [ ] Multiple routes
-
----
