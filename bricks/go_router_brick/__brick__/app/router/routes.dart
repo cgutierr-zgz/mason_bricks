@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/{{#snakeCase}}{{route}}{{/snakeCase}}/{{#snakeCase}}{{route}}{{/snakeCase}}.dart';
 
 enum AppRoutes {
   {{#lowerCase}}{{route}}{{/lowerCase}}(

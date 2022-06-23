@@ -5,7 +5,7 @@ repository: https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/go_r
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.1.0+2
+version: 0.2.0+1
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -26,7 +26,7 @@ vars:
     type: string
     description: Flutter app name
     default: my_example_project
-    prompt: Enter the flutetr project name
+    prompt: Enter the flutter project name
   route:
     type: string
     description: Route name

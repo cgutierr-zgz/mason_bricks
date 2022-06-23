@@ -1,12 +1,15 @@
-# 0.1.0+2
+# 0.2.0+1
 
-- Updated repository link
+- Fixes to the brick
 
 ---
 
 <details>
 <summary>Previous versions</summary>
 
+# 0.1.0+2
+
+- Updated repository link
 # 0.1.0+1
 
 - Initial version of go_router_brick
