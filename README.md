@@ -8,7 +8,7 @@
   <a href="https://pub.dev/documentation/mason_cli/latest/"><img src="https://img.shields.io/pub/v/mason_cli.svg?label=mason" alt="mason"></a>
 </p>
 
-A collection of bricks that enable developers to create and consume reusable templates called bricks.
+A collection of bricks that enable developers consume reusable templates, thanks to [mason](https://github.com/felangel/mason).
 
 ---
 
