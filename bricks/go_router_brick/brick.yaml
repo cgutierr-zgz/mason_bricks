@@ -34,9 +34,14 @@ vars:
     prompt: Enter the route name
   auth_guard:
     type: boolean
-    description: Auth Guard
+    description: Use Auth Guard
     default: false
     prompt: Do you need an Auth Guard for the route?
+  equatable:
+    type: boolean
+    description: Use Equatable
+    default: false
+    prompt: Do you want to use Equatable?
   neglect_route:
     type: boolean
     description: Neglect back navigation on browsers

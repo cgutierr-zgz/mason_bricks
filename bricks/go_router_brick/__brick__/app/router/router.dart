@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router/go_router.dart';
 import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
-import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/auth/auth.dart';
+{{#auth_guard}}import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/auth/auth.dart';{{/auth_guard}}
 
 abstract class AppRouter {
   static GoRouter router({{#auth_guard}}AuthBloc authBloc{{/auth_guard}}) => GoRouter(
