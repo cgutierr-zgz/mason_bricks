@@ -22,6 +22,11 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 vars:
+  only_route:
+    type: boolean
+    description: Create app folder
+    default: true
+    prompt: Omit app and main files?
   app_name:
     type: string
     description: Flutter app name
@@ -42,6 +47,11 @@ vars:
     description: Use Equatable
     default: false
     prompt: Do you want to use Equatable?
+  url_path_strategy:
+    type: boolean
+    description: Set Url Path Strategy to path instead of hash
+    default: false
+    prompt: Do you want to enable url path strategy?
   neglect_route:
     type: boolean
     description: Neglect back navigation on browsers

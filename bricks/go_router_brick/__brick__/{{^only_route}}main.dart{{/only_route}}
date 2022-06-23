@@ -1,0 +1,8 @@
+import 'package:flutter/material.dart';
+import '../package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
+
+void main(){
+  {{#url_path_strategy}}WidgetsFlutterBinding.ensureInitialized();
+  GoRouter.setUrlPathStrategy(UrlPathStrategy.path);{{/url_path_strategy}}
+  runApp({{#pascalCase}}{{app_name}}{{/pascalCase}}());
+} 
