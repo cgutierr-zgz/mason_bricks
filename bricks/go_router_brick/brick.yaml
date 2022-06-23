@@ -32,3 +32,8 @@ vars:
     description: Route name
     default: Home
     prompt: Enter the route name
+  auth_guard:
+    type: boolean
+    description: Auth Guard needed
+    default: false
+    prompt: Do you need an Auth Guard for the route?
