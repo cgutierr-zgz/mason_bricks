@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:go_router/go_router.dart';
 import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
 {{#auth_guard}}import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/auth/auth.dart';{{/auth_guard}}
 
@@ -16,12 +15,9 @@ abstract class AppRouter {
                 ),
               ),
         ],
-      {{#neglect_route}}
-      // Disables history on browser to prevent weird behaviours
-      routerNeglect: true,
-      {{/neglect_route}}
-      {{#auth_guard}}
-      // Refreshes its current route when the stream receives an event
+      {{#neglect_route}}// Disables history on browser to prevent weird behaviours
+      routerNeglect: true,{{/neglect_route}}
+      {{#auth_guard}}// Refreshes its current route when the stream receives an event
       refreshListenable: GoRouterRefreshStream(authBloc.stream),
       redirect: (state) {
         // If the user is not logged in, they need to login
@@ -43,7 +39,6 @@ abstract class AppRouter {
 
         // No need to redirect at all
         return null;
-      },
-      {{/auth_guard}}
+      },{{/auth_guard}}
       );
 }

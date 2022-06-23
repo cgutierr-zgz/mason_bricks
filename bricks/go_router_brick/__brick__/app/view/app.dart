@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
-{{#auth_guard}}import 'package:go_router/go_router.dart';{{/auth_guard}}
+{{#auth_guard}}import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';{{/auth_guard}}
 
-{{^auth_guard}}
-class {{#pascalCase}}{{app_name}}{{/pascalCase}} extends StatelessWidget {
+{{^auth_guard}}class {{#pascalCase}}{{app_name}}{{/pascalCase}} extends StatelessWidget {
   const {{#pascalCase}}{{app_name}}{{/pascalCase}}({super.key});
 
   static final _navigator = AppRouter.router();
@@ -17,10 +17,8 @@ class {{#pascalCase}}{{app_name}}{{/pascalCase}} extends StatelessWidget {
       routeInformationProvider: _navigator.routeInformationProvider,
     );
   }
-}
-{{/auth_guard}}
-
-class {{#pascalCase}}{{app_name}}{{/pascalCase}} extends StatefulWidget {
+}{{/auth_guard}}
+{{#auth_guard}}class {{#pascalCase}}{{app_name}}{{/pascalCase}} extends StatefulWidget {
   const {{#pascalCase}}{{app_name}}{{/pascalCase}}({super.key});
 
   @override
@@ -46,5 +44,4 @@ class _AppState extends State<App> {
       routeInformationProvider: _navigator.routeInformationProvider,
     );
   }
-}
-
+}{{/auth_guard}}
