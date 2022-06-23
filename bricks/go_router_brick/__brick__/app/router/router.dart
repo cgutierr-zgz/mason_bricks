@@ -14,6 +14,14 @@ abstract class AppRouter {
                   child: AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routeView,
                 ),
               ),
+          {{#auth_guard}}GoRoute(
+                path: AppRoutes.login.routePath,
+                name: AppRoutes.login.routeName,
+                pageBuilder: (context, state) => MaterialPage(
+                  key: state.pageKey,
+                  child: AppRoutes.login.routeView,
+                ),
+              ),{{/auth_guard}}
         ],
       {{#neglect_route}}// Disables history on browser to prevent weird behaviours
       routerNeglect: true,{{/neglect_route}}
@@ -22,13 +30,13 @@ abstract class AppRouter {
       redirect: (state) {
         // If the user is not logged in, they need to login
         bool? loggedIn = authBloc.state is AuthAuthenticated;
-        final loggingIn = state.subloc == AppRoutes.login.path;
+        final loggingIn = state.subloc == AppRoutes.login.routePath;
 
         // Bundle the location the user is coming from into a query parameter
         final fromp =
             state.subloc == AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routePath ? '' : '?from=${state.subloc}';
         if (!loggedIn) {
-          return loggingIn ? null : '${AppRoutes.login.path}$fromp';
+          return loggingIn ? null : '${AppRoutes.login.routePath}$fromp';
         }
 
         // If the user is logged in, send them where they were going before

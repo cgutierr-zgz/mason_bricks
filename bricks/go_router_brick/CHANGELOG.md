@@ -1,6 +1,6 @@
 # 0.3.0+1
 
-- Added auth guard, equatable, and neglect route options to the brick
+- Added auth guard, equatable, path strategy, only route and neglect route options to the brick
 
 ---
 

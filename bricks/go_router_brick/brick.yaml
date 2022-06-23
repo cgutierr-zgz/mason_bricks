@@ -24,7 +24,7 @@ environment:
 vars:
   only_route:
     type: boolean
-    description: Create app folder
+    description: Create app folder and main file
     default: true
     prompt: Omit app and main files?
   app_name:
