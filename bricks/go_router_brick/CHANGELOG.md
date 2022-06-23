@@ -1,11 +1,15 @@
-# 0.2.0+1
+# 0.3.0+1
 
-- Fixes to the brick
+- Added auth guard, equatable, path strategy, only route and neglect route options to the brick
 
 ---
 
 <details>
 <summary>Previous versions</summary>
+
+# 0.2.0+1
+
+- Fixes to the brick
 
 # 0.1.0+2
 

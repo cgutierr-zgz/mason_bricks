@@ -5,6 +5,8 @@ class {{#pascalCase}}{{route}}{{/pascalCase}}Page extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text('{{#pascalCase}}{{route}}{{/pascalCase}}Page'),
+    );
   }
 }

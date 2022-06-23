@@ -5,7 +5,7 @@ repository: https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/go_r
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.2.0+1
+version: 0.3.0+1
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -22,6 +22,11 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 vars:
+  only_route:
+    type: boolean
+    description: Create app folder and main file
+    default: true
+    prompt: Omit app and main files?
   app_name:
     type: string
     description: Flutter app name
@@ -32,3 +37,23 @@ vars:
     description: Route name
     default: Home
     prompt: Enter the route name
+  auth_guard:
+    type: boolean
+    description: Use Auth Guard
+    default: false
+    prompt: Do you need an Auth Guard for the route?
+  equatable:
+    type: boolean
+    description: Use Equatable
+    default: false
+    prompt: Do you want to use Equatable?
+  url_path_strategy:
+    type: boolean
+    description: Set Url Path Strategy to path instead of hash
+    default: false
+    prompt: Do you want to enable url path strategy?
+  neglect_route:
+    type: boolean
+    description: Neglect back navigation on browsers
+    default: false
+    prompt: Do you want to neglect back navigation?
