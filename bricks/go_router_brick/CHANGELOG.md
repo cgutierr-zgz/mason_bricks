@@ -1,11 +1,15 @@
-# 0.3.1+1
+# 0.4.0+1
 
-- Upgraded to Shorthand Syntax and updated README
+- Fixed error with view when changed to Shorthand Syntax in v0.3.1+1
 
 ---
 
 <details>
 <summary>Previous versions</summary>
+
+# 0.3.1+1
+
+- Upgraded to Shorthand Syntax and updated README
 
 # 0.3.0+1
 
