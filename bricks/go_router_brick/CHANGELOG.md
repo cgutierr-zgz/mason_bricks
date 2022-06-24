@@ -1,11 +1,15 @@
-# 0.3.0+1
+# 0.3.1+1
 
-- Added auth guard, equatable, path strategy, only route and neglect route options to the brick
+- Upgraded to Shorthand Syntax and updated README
 
 ---
 
 <details>
 <summary>Previous versions</summary>
+
+# 0.3.0+1
+
+- Added auth guard, equatable, path strategy, only route and neglect route options to the brick
 
 # 0.2.0+1
 
