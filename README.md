@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/felangel/mason"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge" alt="powered by mason"></a>
   <a href="https://pub.dev/documentation/mason_cli/latest/"><img src="https://img.shields.io/pub/v/mason_cli.svg?label=mason" alt="mason"></a>
 </p>
 
@@ -12,6 +13,6 @@ A collection of bricks that enable developers consume reusable templates, thanks
 
 ---
 
-## Bricks 🧱
+## My Bricks 🧱
 
 ### [go_router_brick](https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/go_router_brick)
