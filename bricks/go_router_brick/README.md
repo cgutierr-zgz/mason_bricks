@@ -1,7 +1,18 @@
 # Go Router Brick
+[![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
 A brick to create a simple [go_router](https://pub.dev/packages/go_router) route inside your flutter app.
 Additionaly you can generate a simple auth guard, which will generate a login page, and setup some of the go_router values.
+
+
+## Prerequisites ❗️
+- Install [go_router](https://pub.dev/packages/go_router) package from pub.dev
+
+## Optional prerequisites ❓
+Depending on the other features you might also want to install
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) package from pub.dev
+- [equatable](https://pub.dev/packages/equatable) package from pub.dev
+
 
 ## How to use 🚀
 
