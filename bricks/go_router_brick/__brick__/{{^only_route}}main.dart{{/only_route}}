@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
+import 'package:{{app_name.snakeCase()}}/app/app.dart';
 {{#url_path_strategy}}import 'package:go_router/go_router.dart';{{/url_path_strategy}}
 
 void main(){
@@ -8,7 +8,7 @@ void main(){
   runApp(
     {{#auth_guard}}BlocProvider<AuthBloc>(
       create: (context) => AuthBloc(),
-      child:{{/auth_guard}} {{#pascalCase}}{{app_name}}{{/pascalCase}}(),
+      child:{{/auth_guard}} {{app_name.pascalCase()}}(),
      {{#auth_guard}}),{{/auth_guard}}
   );
 } 

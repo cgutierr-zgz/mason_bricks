@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/{{#snakeCase}}{{route}}{{/snakeCase}}/{{#snakeCase}}{{route}}{{/snakeCase}}.dart';
-{{#auth_guard}}import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/login/login.dart';{{/auth_guard}}
+import 'package:{{app_name.snakeCase()}}/{{route.snakeCase()}}/{{route.snakeCase()}}.dart';
+{{#auth_guard}}import 'package:{{app_name.snakeCase()}}/login/login.dart';{{/auth_guard}}
 
 enum AppRoutes {
   {{#auth_guard}}login(
@@ -8,10 +8,10 @@ enum AppRoutes {
     'LOGIN',
     LoginPage(),
   ),{{/auth_guard}}
-  {{#lowerCase}}{{route}}{{/lowerCase}}(
-    '{{#paramCase}}{{route}}{{/paramCase}}',
-    '{{#upperCase}}{{route}}{{/upperCase}}',
-    {{#pascalCase}}{{route}}{{/pascalCase}}Page(),
+  {{route.lowerCase()}}(
+    '{{route.paramCase()}}',
+    '{{route.upperCase()}}',
+  {{route.pascalCase()}}Page(),
   );
 
   const AppRoutes(this.routePath, this.routeName, this.routeView);

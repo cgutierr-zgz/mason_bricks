@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/app/app.dart';
-{{#auth_guard}}import 'package:{{#snakeCase}}{{app_name}}{{/snakeCase}}/auth/auth.dart';{{/auth_guard}}
+import 'package:{{app_name.snakeCase()}}/app/app.dart';
+{{#auth_guard}}import 'package:{{app_name.snakeCase()}}/auth/auth.dart';{{/auth_guard}}
 
 abstract class AppRouter {
   static GoRouter router({{#auth_guard}}AuthBloc authBloc{{/auth_guard}}) => GoRouter(
         routes: [
           GoRoute(
-                path: AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routePath,
-                name: AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routeName,
+                path: AppRoutes.{{route.lowerCase()}}.routePath,
+                name: AppRoutes.{{route.lowerCase()}}.routeName,
                 pageBuilder: (context, state) => MaterialPage(
                   key: state.pageKey,
-                  child: AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routeView,
+                  child: AppRoutes.{{route.lowerCase()}}.routeView,
                 ),
               ),
           {{#auth_guard}}GoRoute(
@@ -34,7 +34,7 @@ abstract class AppRouter {
 
         // Bundle the location the user is coming from into a query parameter
         final fromp =
-            state.subloc == AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routePath ? '' : '?from=${state.subloc}';
+            state.subloc == AppRoutes.{{route.lowerCase()}}.routePath ? '' : '?from=${state.subloc}';
         if (!loggedIn) {
           return loggingIn ? null : '${AppRoutes.login.routePath}$fromp';
         }
@@ -42,7 +42,7 @@ abstract class AppRouter {
         // If the user is logged in, send them where they were going before
         // (or home if they weren't going anywhere)
         if (loggingIn) {
-          return state.queryParams['from'] ?? AppRoutes.{{#lowerCase}}{{route}}{{/lowerCase}}.routePath;
+          return state.queryParams['from'] ?? AppRoutes.{{route.lowerCase()}}.routePath;
         }
 
         // No need to redirect at all
