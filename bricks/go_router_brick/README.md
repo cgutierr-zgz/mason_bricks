@@ -6,12 +6,17 @@ Additionaly you can generate a simple auth guard, which will generate a login pa
 
 
 ## Prerequisites ❗️
-- Install [go_router](https://pub.dev/packages/go_router) package from pub.dev
+Install [go_router](https://pub.dev/packages/go_router) package from pub.dev
+```bash
+$ flutter pub add go_router
+```
 
 ## Optional prerequisites ❓
-Depending on the other features you might also want to install
-- [flutter_bloc](https://pub.dev/packages/flutter_bloc) package from pub.dev
-- [equatable](https://pub.dev/packages/equatable) package from pub.dev
+Depending on the other features you might also want to install [flutter_bloc](https://pub.dev/packages/flutter_bloc) or [equatable](https://pub.dev/packages/equatable) packages from pub.dev
+```bash
+$ flutter pub add flutter_bloc
+$ flutter pub add equatable
+```
 
 
 ## How to use 🚀
