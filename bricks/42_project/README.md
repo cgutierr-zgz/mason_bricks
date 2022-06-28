@@ -6,7 +6,7 @@ A brick to create a simple 42 project folder structure with optional Makefile.
 ## How to use 🚀
 
 ```
-mason make 42_project --makefile false --project_name fract-ol --description "A simple Fractal Renderer"
+$ mason make 42_project --makefile false --project_name fract-ol --description "A simple Fractal Renderer"
 ```
 
 ## Variables ✨
