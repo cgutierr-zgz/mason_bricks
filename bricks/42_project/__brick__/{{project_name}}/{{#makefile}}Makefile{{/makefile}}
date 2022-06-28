@@ -1,0 +1,58 @@
+DAY				=	$(shell date +'%d/%m/%Y %H:%M')
+
+NAME			=	{{project_name}}
+
+HEADER			=	./includes/{{project_name}}.h
+
+SRCS			=	./src/main.c \
+					./src/{{project_name}}.c
+
+OBJS			=	$(SRCS:.c=.o)
+
+CC				=	gcc
+
+CFLAGS			=	-Wall -Werror -Wextra -O3# -g3 -fsanitize=address
+
+RM				=	rm -f
+
+$(NAME):		$(OBJS)
+				@echo $(YELLOW)Compiling ... $(RESET)
+				$(CC) ${CFLAGS} ${OBJS} -I $(HEADER) -o ${NAME}
+
+all:			$(NAME)
+
+clean:
+				@echo $(YELLOW)Cleaning ... $(RED)
+				$(RM) $(OBJS)
+
+fclean:			clean
+				$(RM) $(NAME)
+
+re:				fclean all
+
+# Colors
+RED				:="\033[0;31m"
+GREEN			:="\033[0;32m"
+YELLOW			:="\033[1;33m"
+RESET			:="\x1b[0m"
+
+# Easily push content to our repo
+git:
+				@echo $(YELLOW)Status:$(RESET)
+				@git status || true 
+				@echo $(YELLOW)GIT add ... $(RESET)
+				@git add . || true 
+				@echo $(YELLOW)GIT commit ... $(RESET)
+				@git commit -m "$(DAY)" || true 
+				@echo $(YELLOW)GIT push ... $(RESET)
+				@git push -u origin master || true 
+
+# Easily check the norm
+norminette:
+				@echo $(YELLOW)Norminette...
+				@echo $(GREEN)
+				@norminette $(SRCS) $(SRCS_BONUS) $(HEADER) | grep 'OK' || true 
+				@echo $(RED)
+				@norminette $(SRCS) $(SRCS_BONUS) $(HEADER) | grep 'Error!\|line:' || true
+						
+.PHONY:			all clean fclean re
