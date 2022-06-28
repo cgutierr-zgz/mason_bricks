@@ -20,8 +20,21 @@ A collection of bricks that enable developers consume reusable templates, thanks
 
 ## Usage ✨
 
+### Locally
 ```sh
-$ mason get && mason make 'brick_name' -o generated
+$ mason get && mason make <brick_name> -o generated
+```
+
+### From [brickhub.dev](https://brickhub.dev/)
+You need to install [mason_cli](https://pub.dev/documentation/mason_cli/latest/)
+```sh
+$ dart pub global activate mason_cli
+
+// Install locally
+$ mason add <brick_name> 
+
+// Install globally
+$ mason add -g <brick_name> 
 ```
 
 ## Publishing 🚀
