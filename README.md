@@ -23,3 +23,11 @@ A collection of bricks that enable developers consume reusable templates, thanks
 ```sh
 $ mason get && mason make 'brick_name' -o generated
 ```
+
+## Publishing 🚀
+
+Update the changelog and the version and run
+
+```sh
+$ mason publish
+```

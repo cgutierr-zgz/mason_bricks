@@ -1,21 +1,12 @@
-# Go Router Brick
+# 42 Project
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
-A brick to create a simple 42 project folder structure with or without Makefile.
-
-
-## Prerequisites ❗️
-TODO
-
-## Optional prerequisites ❓
-TODO
-
-// TODO: After generation: Add header 42 user etc
+A brick to create a simple 42 project folder structure with optional Makefile.
 
 ## How to use 🚀
 
 ```
-mason make 42_project --makefile true --name fract-ol
+mason make 42_project --makefile false --project_name fract-ol --description "A simple Fractal Renderer"
 ```
 
 ## Variables ✨
@@ -28,18 +19,22 @@ mason make 42_project --makefile true --name fract-ol
 
 ## Output Example 📦
 
-```dart
-// There's a ton of different combinations
-
-├── app
-│    ├── router
-│    │    ├── router.dart
-│    │    └── routes.dart
-│    ├── view
-│    │    └── app.dart
-│    └── app.dart
-└── home
-    ├── view
-    │    └── home_page.dart
-    └── home.dart
+```c
+└── fract-ol
+     ├── includes
+     │    └── fract-ol.h
+     │
+     ├── src
+     │    ├── fract-ol.c
+     │    └── main.c
+     │
+     ├── Makefile // optional
+	 │
+     └── README.md
 ```
+
+## Roadmap 🗺
+
+- [ ] Generate a custom header based on user input
+- [ ] Generate and add libft to makefile compilation and structure
+- [ ] Generate and add minilibx to makefile compilation and structure
