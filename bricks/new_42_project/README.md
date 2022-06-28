@@ -1,4 +1,4 @@
-# 42 Project
+# New 42 Project
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
 A brick to create a simple 42 project folder structure with optional Makefile.
@@ -6,7 +6,7 @@ A brick to create a simple 42 project folder structure with optional Makefile.
 ## How to use 🚀
 
 ```
-$ mason make 42_project --makefile false --project_name fract-ol --description "A simple Fractal Renderer"
+$ mason make new_42_project --makefile false --project_name fract-ol --description "A simple Fractal Renderer"
 ```
 
 ## Variables ✨

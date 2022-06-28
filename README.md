@@ -16,7 +16,7 @@ A collection of bricks that enable developers consume reusable templates, thanks
 ## My Bricks 🧱
 
 ### [go_router_brick](https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/go_router_brick)
-### [42_project](https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/42_project)
+### [new_42_project](https://github.com/cgutierr-zgz/mason_bricks/tree/master/bricks/new_42_project)
 
 ## Usage ✨
 
