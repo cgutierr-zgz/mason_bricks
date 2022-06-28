@@ -1,1 +1,1 @@
-{"bricks":{"go_router_brick":{"path":"bricks/go_router_brick"}}}
+{"bricks":{"go_router_brick":{"path": "bricks/go_router_brick"},"42_project": {"path": "bricks/42_project"}}}
