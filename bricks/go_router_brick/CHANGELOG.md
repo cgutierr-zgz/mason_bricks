@@ -1,11 +1,15 @@
-# 0.4.0+1
+# 0.4.1
 
-- Fixed error with view when changed to Shorthand Syntax in v0.3.1+1
+- Nothing relevant was changed
 
 ---
 
 <details>
 <summary>Previous versions</summary>
+
+# 0.4.0+1
+
+- Fixed error with view when changed to Shorthand Syntax in v0.3.1+1
 
 # 0.3.1+1
 
