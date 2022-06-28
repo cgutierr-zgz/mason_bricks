@@ -46,11 +46,15 @@ mason make go_router_brick --only_route true --app_name my_example_project --rou
 │    ├── router
 │    │    ├── router.dart
 │    │    └── routes.dart
+│    │
 │    ├── view
 │    │    └── app.dart
+│    │
 │    └── app.dart
+│
 └── home
     ├── view
     │    └── home_page.dart
+    │
     └── home.dart
 ```
