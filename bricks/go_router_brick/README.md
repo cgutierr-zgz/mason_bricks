@@ -22,7 +22,7 @@ $ flutter pub add equatable
 ## How to use 🚀
 
 ```
-mason make go_router_brick --only_route true --app_name my_example_project --route home --auth_guard false --equatable false --url_path_strategy true --neglect_route false
+$ mason make go_router_brick --only_route true --app_name my_example_project --route home --auth_guard false --equatable false --url_path_strategy true --neglect_route false
 ```
 
 ## Variables ✨
